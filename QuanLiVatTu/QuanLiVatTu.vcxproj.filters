@@ -16,6 +16,9 @@
     <Filter Include="Data class">
       <UniqueIdentifier>{047bc19d-be6b-4fc2-b227-40118cb48081}</UniqueIdentifier>
     </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{30b03c58-fc2e-4baf-9ff7-5102c91af802}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -28,6 +31,15 @@
     </ClInclude>
     <ClInclude Include="Day.h">
       <Filter>Data class</Filter>
+    </ClInclude>
+    <ClInclude Include="mylib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UI.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
