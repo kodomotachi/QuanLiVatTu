@@ -128,13 +128,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Tab.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Button.h" />
     <ClInclude Include="Day.h" />
+    <ClInclude Include="DefineConstatant.h" />
     <ClInclude Include="graphics.h" />
     <ClInclude Include="mylib.h" />
     <ClInclude Include="UI.h" />
+    <ClInclude Include="UIController.h" />
     <ClInclude Include="VatTu.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="graphics.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
