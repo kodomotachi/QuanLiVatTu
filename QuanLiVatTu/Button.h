@@ -4,9 +4,9 @@
 #include "graphics.h"
 #include "DefineConstatant.h"
 
+char title_button[4][12] = {"SUPPLIES", "STAFF", "INVOICE", "STATISTICS"};
 int position[4] = {210, 430, 650, 870};
-int top = 20;
-int bottom = 90;
+int top = 20, bottom = 90, cnt = 0;
 
 // Check if button left clicked on button 1
 bool is_pointed_button_1(int xMouse, int yMouse)
@@ -40,29 +40,39 @@ bool is_pointed_button_4(int xMouse, int yMouse)
 	return false;
 }
 
+// Button which chosen
 void button_chosen(int index)
 {
+	cnt = index;
 	setfillstyle(SOLID_FILL, TAB_DEFAULT_BACKGROUND);
 	bar(position[index], 20, position[index] + 200, 90);
+	setcolor(BLACK);
+	setbkcolor(TAB_DEFAULT_BACKGROUND);
+	outtextxy((position[index] + position[index] + 200 - textwidth(title_button[index])) / 2, (90 + 20 - textheight(title_button[index])) / 2, title_button[index]);
 
 	setfillstyle(SOLID_FILL, BUTTON_BACKGROUND);
 	for (int i = 0; i < 4; i++)
 	{
 		if (i != index)
+		{
 			bar(position[i], 20, position[i] + 200, 90);
+			setcolor(BLACK);
+			setbkcolor(BUTTON_BACKGROUND);
+			outtextxy((position[i] + position[i] + 200 - textwidth(title_button[i])) / 2, (90 + 20 - textheight(title_button[i])) / 2, title_button[i]);
+		}
 	}
 	std::cout << index << "\n";
 }
 
 void isPointed(int xMouse, int yMouse)
-{
-	if (is_pointed_button_1(xMouse, yMouse) && GetAsyncKeyState(VK_LBUTTON) && 0x8000)
+{	
+	if (is_pointed_button_1(xMouse, yMouse) && GetAsyncKeyState(VK_LBUTTON) && 0x8000 && cnt != 0)
 		button_chosen(0);
-	if (is_pointed_button_2(xMouse, yMouse) && GetAsyncKeyState(VK_LBUTTON) && 0x8000)
+	if (is_pointed_button_2(xMouse, yMouse) && GetAsyncKeyState(VK_LBUTTON) && 0x8000 && cnt != 1)
 		button_chosen(1);
-	if (is_pointed_button_3(xMouse, yMouse) && GetAsyncKeyState(VK_LBUTTON) && 0x8000)
+	if (is_pointed_button_3(xMouse, yMouse) && GetAsyncKeyState(VK_LBUTTON) && 0x8000 && cnt != 2)
 		button_chosen(2);
-	if (is_pointed_button_4(xMouse, yMouse) && GetAsyncKeyState(VK_LBUTTON) && 0x8000)
+	if (is_pointed_button_4(xMouse, yMouse) && GetAsyncKeyState(VK_LBUTTON) && 0x8000 && cnt != 3)
 		button_chosen(3);
 }
 
@@ -71,7 +81,16 @@ void defaultButton()
 	setfillstyle(SOLID_FILL, TAB_DEFAULT_BACKGROUND);
 	bar(position[0], 20, position[0] + 200, 90);
 
+	setcolor(BLACK);
+	setbkcolor(TAB_DEFAULT_BACKGROUND);
+	outtextxy((position[0] + position[0] + 200 - textwidth(title_button[0])) / 2, (90 + 20 - textheight(title_button[0])) / 2, title_button[0]);
+
 	setfillstyle(SOLID_FILL, BUTTON_BACKGROUND);
 	for (int i = 1; i < 4; i++)
+	{
 		bar(position[i], top, position[i] + 200, bottom);
+		setcolor(BLACK);
+		setbkcolor(BUTTON_BACKGROUND);
+		outtextxy((position[i] + position[i] + 200 - textwidth(title_button[i])) / 2, (90 + 20 - textheight(title_button[i])) / 2, title_button[i]);
+	}
 }

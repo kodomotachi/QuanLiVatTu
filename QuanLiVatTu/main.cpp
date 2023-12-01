@@ -12,6 +12,7 @@ int main()
 	defaultButton();
 	while (true)
 	{
+		// setactivepage(1 - getactivepage());
 		isPointed(mousex(), mousey());
 		clearmouseclick(VK_LBUTTON);
 		clearmouseclick(VK_RBUTTON);
