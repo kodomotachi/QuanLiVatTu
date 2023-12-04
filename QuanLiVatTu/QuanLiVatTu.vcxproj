@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="custom_library.h" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Tab.h" />
   </ItemGroup>

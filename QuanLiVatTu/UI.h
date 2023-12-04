@@ -48,3 +48,9 @@ void writeTextButton()
 
 	outtextxy((210 + 410 - textwidth(text)) / 2, (20 + 90 - textheight(text)) / 2, text);
 }
+
+void drawContentBoard()
+{
+	setfillstyle(SOLID_FILL, COLOR(232, 242, 247));
+	bar(50, 120, 1200, 650);
+}

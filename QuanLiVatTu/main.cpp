@@ -10,13 +10,17 @@ int main()
 {
 	drawBackground();
 	defaultButton();
+	drawContentBoard();
+
 	while (true)
 	{
 		// setactivepage(1 - getactivepage());
+
 		isPointed(mousex(), mousey());
 		clearmouseclick(VK_LBUTTON);
 		clearmouseclick(VK_RBUTTON);
 	}
+
 	getch();
 	closegraph();
 	return 0;
