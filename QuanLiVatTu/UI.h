@@ -54,3 +54,11 @@ void drawContentBoard()
 	setfillstyle(SOLID_FILL, COLOR(232, 242, 247));
 	bar(50, 120, 1200, 650);
 }
+
+void drawSubwindow()
+{
+	setfillstyle(SOLID_FILL, SUBWINDOW_BACKGROUND);
+	bar(25, 100, 1257, 682);
+	setcolor(BUTTON_BACKGROUND);
+	rectangle(25, 100, 1257, 682);
+}

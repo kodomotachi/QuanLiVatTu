@@ -127,7 +127,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="custom_library.h" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Tab.h" />
   </ItemGroup>
@@ -136,6 +135,7 @@
     <ClInclude Include="Day.h" />
     <ClInclude Include="DefineConstatant.h" />
     <ClInclude Include="graphics.h" />
+    <ClInclude Include="function_library.h" />
     <ClInclude Include="mylib.h" />
     <ClInclude Include="UI.h" />
     <ClInclude Include="UIController.h" />

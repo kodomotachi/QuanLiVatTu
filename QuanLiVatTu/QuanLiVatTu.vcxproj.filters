@@ -27,9 +27,6 @@
     <ClCompile Include="Tab.h">
       <Filter>UI</Filter>
     </ClCompile>
-    <ClCompile Include="custom_library.h">
-      <Filter>UI</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="VatTu.h">
@@ -54,6 +51,9 @@
       <Filter>UI</Filter>
     </ClInclude>
     <ClInclude Include="Button.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="function_library.h">
       <Filter>UI</Filter>
     </ClInclude>
   </ItemGroup>

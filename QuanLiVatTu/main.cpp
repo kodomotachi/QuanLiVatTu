@@ -1,27 +1,31 @@
 #pragma once 
 
 #include <iostream>
-#include "graphics.h"
+#include "function_library.h"
 #include "UI.h"
 #include "Button.h"
+
 using namespace std;
+
+char s[50];
 
 int main()
 {
+	int cnt = 0;
 	drawBackground();
+	drawTabButton();
 	defaultButton();
-	drawContentBoard();
+	drawSubwindow();
 
+	/*
 	while (true)
 	{
-		// setactivepage(1 - getactivepage());
 
-		isPointed(mousex(), mousey());
-		clearmouseclick(VK_LBUTTON);
-		clearmouseclick(VK_RBUTTON);
 	}
+	*/
 
 	getch();
 	closegraph();
+
 	return 0;
 }
