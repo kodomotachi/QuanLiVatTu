@@ -17,12 +17,6 @@ void drawBackground()
 
 	// Clear all on window (expect color background)
 	cleardevice();
-
-	//settextstyle(0, 0, 1);
-	//settextjustify(1, 1);
-	//char s[70] = "Hello Sinh, have a nice day, and dont get up late, fck you!";
-	//setcolor(BLACK);
-	//outtextxy(230, 230, s);
 }
 
 void drawTabButton()
@@ -38,15 +32,6 @@ void drawTabButton()
 	bar(430, 20, 630, 90); // Second button
 	bar(650, 20, 850, 90); // Third button
 	bar(870, 20, 1070, 90); // Forth button
-}
-
-void writeTextButton()
-{
-	char text[10] = "MATERIALS";
-	setbkcolor(TAB_DEFAULT_BACKGROUND);
-	setcolor(BLACK);
-
-	outtextxy((210 + 410 - textwidth(text)) / 2, (20 + 90 - textheight(text)) / 2, text);
 }
 
 void drawContentBoard()
