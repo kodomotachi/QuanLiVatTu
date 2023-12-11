@@ -4,6 +4,7 @@
 #include "function_library.h"
 #include "UI.h"
 #include "Button.h"
+#include "supplies.h"
 
 using namespace std;
 
@@ -15,14 +16,14 @@ int main()
 	drawBackground();
 	drawTabButton();
 	defaultButton();
-	drawSubwindow();
 
-	/*
 	while (true)
 	{
+		isPointed(mousex(), mousey());
 
+		clearmouseclick(VK_LBUTTON);
+		clearmouseclick(VK_RBUTTON);
 	}
-	*/
 
 	getch();
 	closegraph();

@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="input.h" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Tab.h" />
   </ItemGroup>
@@ -137,6 +138,7 @@
     <ClInclude Include="graphics.h" />
     <ClInclude Include="function_library.h" />
     <ClInclude Include="mylib.h" />
+    <ClInclude Include="supplies.h" />
     <ClInclude Include="UI.h" />
     <ClInclude Include="UIController.h" />
     <ClInclude Include="VatTu.h" />

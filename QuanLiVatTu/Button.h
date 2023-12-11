@@ -3,6 +3,8 @@
 #include <iostream>
 #include "graphics.h"
 #include "DefineConstatant.h"
+#include "supplies.h"
+#include "UI.h"
 
 char title_button[4][12] = {"SUPPLIES", "STAFF", "INVOICE", "STATISTICS"};
 int position[4] = {210, 430, 650, 870};
@@ -67,13 +69,27 @@ void button_chosen(int index)
 void isPointed(int xMouse, int yMouse)
 {	
 	if (is_pointed_button_1(xMouse, yMouse) && GetAsyncKeyState(VK_LBUTTON) && 0x8000 && cnt != 0)
+	{
 		button_chosen(0);
+		drawSubwindow();
+		drawSheet();
+		drawTitle();
+	}
 	if (is_pointed_button_2(xMouse, yMouse) && GetAsyncKeyState(VK_LBUTTON) && 0x8000 && cnt != 1)
+	{
 		button_chosen(1);
+		drawSubwindow();
+	}
 	if (is_pointed_button_3(xMouse, yMouse) && GetAsyncKeyState(VK_LBUTTON) && 0x8000 && cnt != 2)
+	{
 		button_chosen(2);
+		drawSubwindow();
+	}
 	if (is_pointed_button_4(xMouse, yMouse) && GetAsyncKeyState(VK_LBUTTON) && 0x8000 && cnt != 3)
+	{
 		button_chosen(3);
+		drawSubwindow();
+	}
 }
 
 void defaultButton()
@@ -93,4 +109,8 @@ void defaultButton()
 		setbkcolor(BUTTON_BACKGROUND);
 		outtextxy((position[i] + position[i] + 200 - textwidth(title_button[i])) / 2, (90 + 20 - textheight(title_button[i])) / 2, title_button[i]);
 	}
+
+	drawSubwindow();
+	drawSheet();
+	drawTitle();
 }
