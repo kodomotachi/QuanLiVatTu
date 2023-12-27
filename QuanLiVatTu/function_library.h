@@ -33,6 +33,7 @@ void countSort(int* a, int n, int exp)
 		a[i] = output[i];
 }
 
+// main function if you want to call and sort them
 void radixSort(int* a, int n)
 {
 	int m = getMax(a, n);

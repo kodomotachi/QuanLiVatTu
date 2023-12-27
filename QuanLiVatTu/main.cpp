@@ -16,6 +16,7 @@ int main()
 	drawBackground();
 	drawTabButton();
 	defaultButton();
+	drawExitButton();
 
 	while (true)
 	{

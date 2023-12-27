@@ -1,6 +1,7 @@
 #pragma once 
 
 #include <iostream>
+#include <WinUser.h>
 #include "graphics.h"
 #include "DefineConstatant.h"
 #include "supplies.h"
@@ -42,6 +43,13 @@ bool is_pointed_button_4(int xMouse, int yMouse)
 	return false;
 }
 
+bool is_pointed_exit_button(int xMouse, int yMouse)
+{
+	if (xMouse <= 1270 && xMouse >= 1240 && yMouse >= 5 && yMouse <= 35)
+		return true;
+	return false;
+}
+
 // Button which chosen
 void button_chosen(int index)
 {
@@ -79,6 +87,14 @@ void isPointed(int xMouse, int yMouse)
 	{
 		button_chosen(1);
 		drawSubwindow();
+		/*
+		int msgboxID = MessageBox(
+			GetForegroundWindow(),
+			(LPCWSTR)L"Do you want switch to other tab?",
+			(LPCWSTR)L"Warning",
+			MB_ICONEXCLAMATION | MB_OKCANCEL
+		);
+		*/
 	}
 	if (is_pointed_button_3(xMouse, yMouse) && GetAsyncKeyState(VK_LBUTTON) && 0x8000 && cnt != 2)
 	{
@@ -90,6 +106,8 @@ void isPointed(int xMouse, int yMouse)
 		button_chosen(3);
 		drawSubwindow();
 	}
+	if (is_pointed_exit_button(xMouse, yMouse) && GetAsyncKeyState(VK_LBUTTON) && 0x8000)
+		exit(0); // exit program immediately
 }
 
 void defaultButton()
