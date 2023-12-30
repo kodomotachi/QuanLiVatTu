@@ -62,10 +62,16 @@
     <ClInclude Include="supplies.h">
       <Filter>UI</Filter>
     </ClInclude>
+    <ClInclude Include="staff.h">
+      <Filter>UI</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Library Include="graphics.lib">
       <Filter>Header Files</Filter>
     </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="staff.txt" />
   </ItemGroup>
 </Project>

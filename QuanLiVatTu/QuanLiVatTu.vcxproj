@@ -138,6 +138,7 @@
     <ClInclude Include="graphics.h" />
     <ClInclude Include="function_library.h" />
     <ClInclude Include="mylib.h" />
+    <ClInclude Include="staff.h" />
     <ClInclude Include="supplies.h" />
     <ClInclude Include="UI.h" />
     <ClInclude Include="UIController.h" />
@@ -145,6 +146,9 @@
   </ItemGroup>
   <ItemGroup>
     <Library Include="graphics.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="staff.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
