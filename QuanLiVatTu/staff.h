@@ -9,6 +9,18 @@
 
 using namespace std;
 
+const int MAXN = 2e5 + 4;
+
+struct staff
+{
+	char MANV[15];
+	char HO[40];
+	char TEN[10];
+	int PHAI;
+};
+
+staff arr[MAXN]; // array use struct staff
+
 void staff_drawTitle()
 {
 	char title[15] = "STAFF DATA";
@@ -55,33 +67,54 @@ void staff_writeData()
 		outtextxy(textWidth, textHeight, s[i]);
 	}
 
-	int cnt = 0;
+	int cnt = 0, index_staff = 0;
 
 	ifstream input("staff.txt"); // open file staff.txt
 
-	if (input.fail())
+	if (input.fail()) // if file has error
 	{
 		std::cout << "File nhu con cac, viet lai file moi cho bo may";
+		return void();
 	}
 
 	input.ignore();
 
+	// 15 40 10
+
 	while (!input.eof())
 	{
-		char tmp[255];
-		input.getline(tmp, 255);
-		if (cnt % 4 < 3)
+		if (cnt % 4 == 0)
 		{
-			string s = tmp;
-			cout << s << "\n";
+			//char tmp[15];
+			input.getline(arr[index_staff].MANV, 15);
+		}
+		else if (cnt % 4 == 1)
+		{
+			input.getline(arr[index_staff].HO, 40);
+		}
+		else if (cnt % 4 == 2)
+		{
+			input.getline(arr[index_staff].TEN, 10);
 		}
 		else
 		{
+			char tmp[3];
+			input.getline(tmp, 3);
 			char* output;
 			int result = strtol(tmp, &output, 10);
-			cout << "Input: " << result << "\n";
+			//cout << "Input: " << result << "\n";
+			arr[index_staff].PHAI = result;
+			index_staff++;
 		}
 		++cnt;
+	}
+
+	for (int i = 0; i < index_staff; i++)
+	{
+		cout << "Ma nhan vien: " << arr[i].MANV << "\n";
+		cout << "Ho: " << arr[i].HO << "\n";
+		cout << "Ten: " << arr[i].TEN << "\n";
+		cout << "Phai: " << (arr[i].PHAI == 0 ? "Nam" : "Nu") << "\n\n";
 	}
 
 	input.close();
