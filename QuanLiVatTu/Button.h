@@ -77,7 +77,7 @@ void button_chosen(int index)
 
 void isPointed(int xMouse, int yMouse)
 {	
-	if (is_pointed_button_1(xMouse, yMouse) && GetAsyncKeyState(VK_LBUTTON) && 0x8000 && cnt != 0)
+	if (is_pointed_button_1(xMouse, yMouse) && GetAsyncKeyState(VK_LBUTTON) && 0x8000 && cnt != 0) // 0x8000
 	{
 		button_chosen(0);
 		drawSubwindow();
