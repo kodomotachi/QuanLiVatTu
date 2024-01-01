@@ -19,6 +19,9 @@
     <Filter Include="UI">
       <UniqueIdentifier>{30b03c58-fc2e-4baf-9ff7-5102c91af802}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Data file">
+      <UniqueIdentifier>{34b94c59-b9b0-4fe3-8ae0-26bc77c9ca9e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -62,10 +65,24 @@
     <ClInclude Include="supplies.h">
       <Filter>UI</Filter>
     </ClInclude>
+    <ClInclude Include="CT_HoaDon.h">
+      <Filter>Data class</Filter>
+    </ClInclude>
+    <ClInclude Include="HoaDon.h">
+      <Filter>Data class</Filter>
+    </ClInclude>
+    <ClInclude Include="NhanVien.h">
+      <Filter>Data class</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Library Include="graphics.lib">
       <Filter>Header Files</Filter>
     </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="VatTu.txt">
+      <Filter>Data file</Filter>
+    </Text>
   </ItemGroup>
 </Project>
