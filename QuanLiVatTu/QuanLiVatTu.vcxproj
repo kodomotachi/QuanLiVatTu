@@ -137,6 +137,7 @@
     <ClInclude Include="DefineConstatant.h" />
     <ClInclude Include="graphics.h" />
     <ClInclude Include="function_library.h" />
+    <ClInclude Include="invoice.h" />
     <ClInclude Include="mylib.h" />
     <ClInclude Include="staff.h" />
     <ClInclude Include="supplies.h" />

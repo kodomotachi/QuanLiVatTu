@@ -113,6 +113,8 @@ void isPointed(int xMouse, int yMouse)
 	}
 	if (is_pointed_exit_button(xMouse, yMouse) && GetAsyncKeyState(VK_LBUTTON) && 0x8000)
 		exit(0); // exit program immediately
+	clearmouseclick(VK_LBUTTON);
+	clearmouseclick(VK_RBUTTON);
 }
 
 void defaultButton()

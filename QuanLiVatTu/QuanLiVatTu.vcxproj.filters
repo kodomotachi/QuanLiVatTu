@@ -65,6 +65,9 @@
     <ClInclude Include="staff.h">
       <Filter>UI</Filter>
     </ClInclude>
+    <ClInclude Include="invoice.h">
+      <Filter>UI</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Library Include="graphics.lib">
