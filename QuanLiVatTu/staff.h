@@ -2,6 +2,7 @@
 
 #include "graphics.h"
 #include "DefineConstatant.h"
+#include "Button.h"
 #include <fstream>
 #include <cstring>
 #include <string>
@@ -89,6 +90,7 @@ void staff_writeData()
 
 	// 15 40 10
 
+	// input data from file 
 	while (!input.eof())
 	{
 		if (cnt % 4 == 0)
@@ -139,42 +141,42 @@ void staff_writeData()
 
 void check_state_staff(int xmouse, int ymouse)
 {
-	if (xmouse >= LEFT_BORDER && xmouse <= RIGHT_BORDER && ymouse >= 200 && ymouse <= 200 + 36)
-	{
-		setcolor(TAB_ON_SELECTED_BACKGROUND);
-		setbkcolor(SUBWINDOW_BACKGROUND);
-		int i = 0;
-		outtextxy((438 + 225 - textwidth(arr[i].MANV)) / 2, (200 + i * 36 + 200 + (i + 1) * 36 - textheight(arr[i].MANV)) / 2, arr[i].MANV);
-		outtextxy((850 + 438 - textwidth(arr[i].HO)) / 2, (200 + i * 36 + 200 + (i + 1) * 36 - textheight(arr[i].HO)) / 2, arr[i].HO);
-		outtextxy((1063 + 850 - textwidth(arr[i].TEN)) / 2, (200 + i * 36 + 200 + (i + 1) * 36 - textheight(arr[i].TEN)) / 2, arr[i].TEN);
+		if (xmouse >= LEFT_BORDER && xmouse <= RIGHT_BORDER && ymouse >= 200 && ymouse <= 200 + 36)
+		{
+			setcolor(TAB_ON_SELECTED_BACKGROUND);
+			setbkcolor(SUBWINDOW_BACKGROUND);
+			int i = 0;
+			outtextxy((438 + 225 - textwidth(arr[i].MANV)) / 2, (200 + i * 36 + 200 + (i + 1) * 36 - textheight(arr[i].MANV)) / 2, arr[i].MANV);
+			outtextxy((850 + 438 - textwidth(arr[i].HO)) / 2, (200 + i * 36 + 200 + (i + 1) * 36 - textheight(arr[i].HO)) / 2, arr[i].HO);
+			outtextxy((1063 + 850 - textwidth(arr[i].TEN)) / 2, (200 + i * 36 + 200 + (i + 1) * 36 - textheight(arr[i].TEN)) / 2, arr[i].TEN);
 
-		string check;
+			string check;
 
-		if (arr[i].PHAI)
-			check = "Nu";
+			if (arr[i].PHAI)
+				check = "Nu";
+			else
+				check = "Nam";
+			char* tmp = &check[0];
+			outtextxy((1155 + 1063 - textwidth(tmp)) / 2, (200 + i * 36 + 200 + (i + 1) * 36 - textheight(tmp)) / 2, tmp);
+		}
 		else
-			check = "Nam";
-		char* tmp = &check[0];
-		outtextxy((1155 + 1063 - textwidth(tmp)) / 2, (200 + i * 36 + 200 + (i + 1) * 36 - textheight(tmp)) / 2, tmp);
-	}
-	else
-	{
-		setcolor(BLACK);
-		setbkcolor(SUBWINDOW_BACKGROUND);
-		int i = 0;
-		outtextxy((438 + 225 - textwidth(arr[i].MANV)) / 2, (200 + i * 36 + 200 + (i + 1) * 36 - textheight(arr[i].MANV)) / 2, arr[i].MANV);
-		outtextxy((850 + 438 - textwidth(arr[i].HO)) / 2, (200 + i * 36 + 200 + (i + 1) * 36 - textheight(arr[i].HO)) / 2, arr[i].HO);
-		outtextxy((1063 + 850 - textwidth(arr[i].TEN)) / 2, (200 + i * 36 + 200 + (i + 1) * 36 - textheight(arr[i].TEN)) / 2, arr[i].TEN);
+		{
+			setcolor(BLACK);
+			setbkcolor(SUBWINDOW_BACKGROUND);
+			int i = 0;
+			outtextxy((438 + 225 - textwidth(arr[i].MANV)) / 2, (200 + i * 36 + 200 + (i + 1) * 36 - textheight(arr[i].MANV)) / 2, arr[i].MANV);
+			outtextxy((850 + 438 - textwidth(arr[i].HO)) / 2, (200 + i * 36 + 200 + (i + 1) * 36 - textheight(arr[i].HO)) / 2, arr[i].HO);
+			outtextxy((1063 + 850 - textwidth(arr[i].TEN)) / 2, (200 + i * 36 + 200 + (i + 1) * 36 - textheight(arr[i].TEN)) / 2, arr[i].TEN);
 
-		string check;
+			string check;
 
-		if (arr[i].PHAI)
-			check = "Nu";
-		else
-			check = "Nam";
-		char* tmp = &check[0];
-		outtextxy((1155 + 1063 - textwidth(tmp)) / 2, (200 + i * 36 + 200 + (i + 1) * 36 - textheight(tmp)) / 2, tmp);
-	}
+			if (arr[i].PHAI)
+				check = "Nu";
+			else
+				check = "Nam";
+			char* tmp = &check[0];
+			outtextxy((1155 + 1063 - textwidth(tmp)) / 2, (200 + i * 36 + 200 + (i + 1) * 36 - textheight(tmp)) / 2, tmp);
+		}
 	/*
 	if (xmouse >= LEFT_BORDER && xmouse <= RIGHT_BORDER && ymouse && ymouse)
 	if (xmouse >= LEFT_BORDER && xmouse <= RIGHT_BORDER && ymouse && ymouse)
@@ -204,5 +206,6 @@ void draw_staff_button()
 	outtextxy((left + right - textwidth(_right)) / 2, (top + bottom - textheight(_right)) / 2, _right);
 
 	// error in this (detail: not show state hover, fix later)
-	check_state_staff(mousex(), mousey());
+	while (true)
+		check_state_staff(mousex(), mousey());
 }

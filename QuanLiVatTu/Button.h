@@ -6,6 +6,7 @@
 #include "DefineConstatant.h"
 #include "supplies.h"
 #include "staff.h"
+#include "invoice.h"
 #include "UI.h"
 
 char title_button[4][12] = {"SUPPLIES", "STAFF", "INVOICE", "STATISTICS"};
@@ -100,11 +101,14 @@ void isPointed(int xMouse, int yMouse)
 		);
 		*/
 		draw_staff_button();
+		
 	}
 	if (is_pointed_button_3(xMouse, yMouse) && GetAsyncKeyState(VK_LBUTTON) && 0x8000 && cnt != 2)
 	{
 		button_chosen(2);
 		drawSubwindow();
+		invoice_drawSheet();
+		invoice_drawTitle();
 	}
 	if (is_pointed_button_4(xMouse, yMouse) && GetAsyncKeyState(VK_LBUTTON) && 0x8000 && cnt != 3)
 	{
