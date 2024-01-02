@@ -99,6 +99,7 @@ void isPointed(int xMouse, int yMouse)
 			MB_ICONEXCLAMATION | MB_OKCANCEL
 		);
 		*/
+		draw_staff_button();
 	}
 	if (is_pointed_button_3(xMouse, yMouse) && GetAsyncKeyState(VK_LBUTTON) && 0x8000 && cnt != 2)
 	{

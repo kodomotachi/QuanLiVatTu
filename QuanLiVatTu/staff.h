@@ -67,7 +67,15 @@ void staff_writeData()
 		outtextxy(textWidth, textHeight, s[i]);
 	}
 
+	// write title on sheet 
 	char title[5][30] = { "NUMBER", "ID", "FIRST NAME", "LAST NAME", "SEX" };
+
+	setbkcolor(TAB_ON_SELECTED_BACKGROUND);
+	outtextxy((LEFT_BORDER + 225 - textwidth(title[0])) / 2, (TOP_BORDER + TOP_BORDER + 50 - textheight(title[0])) / 2, title[0]);
+	outtextxy((438 + 225 - textwidth(title[1])) / 2, (TOP_BORDER + TOP_BORDER + 50 - textheight(title[1])) / 2, title[1]);
+	outtextxy((850 + 438 - textwidth(title[2])) / 2, (TOP_BORDER + TOP_BORDER + 50 - textheight(title[2])) / 2, title[2]);
+	outtextxy((850 + 1063 - textwidth(title[3])) / 2, (TOP_BORDER + TOP_BORDER + 50 - textheight(title[3])) / 2, title[3]);
+	outtextxy((1063 + RIGHT_BORDER - textwidth(title[4])) / 2, (TOP_BORDER + TOP_BORDER + 50 - textheight(title[4])) / 2, title[4]);
 
 	int cnt = 0, index_staff = 0;
 
@@ -109,6 +117,7 @@ void staff_writeData()
 		++cnt;
 	}
 
+	setbkcolor(SUBWINDOW_BACKGROUND);
 	for (int i = 0; i < 10; i++)
 	{
 		outtextxy((438 + 225 - textwidth(arr[i].MANV)) / 2, (200 + i * 36 + 200 + (i + 1) * 36 - textheight(arr[i].MANV)) / 2, arr[i].MANV);
@@ -126,4 +135,31 @@ void staff_writeData()
 	}
 
 	input.close();
+}
+
+void draw_staff_button()
+{
+	char _left[2] = "<";
+	char _right[2] = ">";
+
+	int left = SCREEN_WIDTH / 2 - 100;
+	int top = BOTTOM_BORDER + 50;
+	int right = left + 50;
+	int bottom = top + 30;
+
+	setfillstyle(SOLID_FILL, BUTTON_PAGE);
+	setcolor(BLACK);
+	bar(left, top, right, bottom);
+	setbkcolor(BUTTON_PAGE);
+	outtextxy((left + right - textwidth(_left)) / 2, (top + bottom - textheight(_left)) / 2, _left);
+
+	left = right + 70;
+	right = left + 50;
+	bar(left, top, right, bottom);
+	outtextxy((left + right - textwidth(_right)) / 2, (top + bottom - textheight(_right)) / 2, _right);
+}
+
+void check_state_staff()
+{
+
 }
