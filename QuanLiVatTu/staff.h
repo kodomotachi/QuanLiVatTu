@@ -141,11 +141,12 @@ void staff_writeData()
 
 void check_state_staff(int xmouse, int ymouse)
 {
-		if (xmouse >= LEFT_BORDER && xmouse <= RIGHT_BORDER && ymouse >= 200 && ymouse <= 200 + 36)
+	for (int i = 0; i < 10; i++)
+	{
+		if (xmouse >= LEFT_BORDER && xmouse <= RIGHT_BORDER && ymouse >= 200 + i * 36 && ymouse <= 200 + ((i + 1) * 36))
 		{
 			setcolor(TAB_ON_SELECTED_BACKGROUND);
 			setbkcolor(SUBWINDOW_BACKGROUND);
-			int i = 0;
 			outtextxy((438 + 225 - textwidth(arr[i].MANV)) / 2, (200 + i * 36 + 200 + (i + 1) * 36 - textheight(arr[i].MANV)) / 2, arr[i].MANV);
 			outtextxy((850 + 438 - textwidth(arr[i].HO)) / 2, (200 + i * 36 + 200 + (i + 1) * 36 - textheight(arr[i].HO)) / 2, arr[i].HO);
 			outtextxy((1063 + 850 - textwidth(arr[i].TEN)) / 2, (200 + i * 36 + 200 + (i + 1) * 36 - textheight(arr[i].TEN)) / 2, arr[i].TEN);
@@ -163,7 +164,6 @@ void check_state_staff(int xmouse, int ymouse)
 		{
 			setcolor(BLACK);
 			setbkcolor(SUBWINDOW_BACKGROUND);
-			int i = 0;
 			outtextxy((438 + 225 - textwidth(arr[i].MANV)) / 2, (200 + i * 36 + 200 + (i + 1) * 36 - textheight(arr[i].MANV)) / 2, arr[i].MANV);
 			outtextxy((850 + 438 - textwidth(arr[i].HO)) / 2, (200 + i * 36 + 200 + (i + 1) * 36 - textheight(arr[i].HO)) / 2, arr[i].HO);
 			outtextxy((1063 + 850 - textwidth(arr[i].TEN)) / 2, (200 + i * 36 + 200 + (i + 1) * 36 - textheight(arr[i].TEN)) / 2, arr[i].TEN);
@@ -177,10 +177,7 @@ void check_state_staff(int xmouse, int ymouse)
 			char* tmp = &check[0];
 			outtextxy((1155 + 1063 - textwidth(tmp)) / 2, (200 + i * 36 + 200 + (i + 1) * 36 - textheight(tmp)) / 2, tmp);
 		}
-	/*
-	if (xmouse >= LEFT_BORDER && xmouse <= RIGHT_BORDER && ymouse && ymouse)
-	if (xmouse >= LEFT_BORDER && xmouse <= RIGHT_BORDER && ymouse && ymouse)
-	*/
+	}
 }
 
 // draw roll-page button
