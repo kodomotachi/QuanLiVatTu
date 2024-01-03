@@ -10,7 +10,7 @@
 
 using namespace std;
 
-const int MAXN = 2e5 + 4;
+const int MAXN = 200004;
 
 struct staff
 {
@@ -56,6 +56,7 @@ void staff_drawSheet()
 	line(1063, TOP_BORDER, 1063, BOTTOM_BORDER);
 }
 
+// write titile and data into sheet
 void staff_writeData()
 {
 	char s[10][3] = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
@@ -87,8 +88,6 @@ void staff_writeData()
 		std::cout << "File nhu con cac, viet lai file moi cho bo may";
 		return void();
 	}
-
-	// 15 40 10
 
 	// input data from file 
 	while (!input.eof())
@@ -139,13 +138,14 @@ void staff_writeData()
 	input.close();
 }
 
+// hover function -> make to change color
 void check_state_staff(int xmouse, int ymouse)
 {
 	for (int i = 0; i < 10; i++)
 	{
 		if (xmouse >= LEFT_BORDER && xmouse <= RIGHT_BORDER && ymouse >= 200 + i * 36 && ymouse <= 200 + ((i + 1) * 36))
 		{
-			setcolor(TAB_ON_SELECTED_BACKGROUND);
+			setcolor(TAB_DEFAULT_BACKGROUND);
 			setbkcolor(SUBWINDOW_BACKGROUND);
 			outtextxy((438 + 225 - textwidth(arr[i].MANV)) / 2, (200 + i * 36 + 200 + (i + 1) * 36 - textheight(arr[i].MANV)) / 2, arr[i].MANV);
 			outtextxy((850 + 438 - textwidth(arr[i].HO)) / 2, (200 + i * 36 + 200 + (i + 1) * 36 - textheight(arr[i].HO)) / 2, arr[i].HO);
@@ -201,8 +201,4 @@ void draw_staff_button()
 	right = left + 50;
 	bar(left, top, right, bottom);
 	outtextxy((left + right - textwidth(_right)) / 2, (top + bottom - textheight(_right)) / 2, _right);
-
-	// error in this (detail: not show state hover, fix later)
-	while (true)
-		check_state_staff(mousex(), mousey());
 }

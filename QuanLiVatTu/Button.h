@@ -76,6 +76,21 @@ void button_chosen(int index)
 	std::cout << index << "\n";
 }
 
+int check_state_button_tab(int xMouse, int yMouse)
+{
+	if (is_pointed_button_1(xMouse, yMouse) && GetAsyncKeyState(VK_LBUTTON) && 0x8000)
+		return 1;
+	if (is_pointed_button_2(xMouse, yMouse) && GetAsyncKeyState(VK_LBUTTON) && 0x8000)
+		return 2;
+	if (is_pointed_button_3(xMouse, yMouse) && GetAsyncKeyState(VK_LBUTTON) && 0x8000)
+		return 3;
+	if (is_pointed_button_4(xMouse, yMouse) && GetAsyncKeyState(VK_LBUTTON) && 0x8000)
+		return 4;
+	if (is_pointed_exit_button(xMouse, yMouse) && GetAsyncKeyState(VK_LBUTTON) && 0x8000)
+		return 5;
+	return 0;
+}
+
 void isPointed(int xMouse, int yMouse)
 {	
 	if (is_pointed_button_1(xMouse, yMouse) && GetAsyncKeyState(VK_LBUTTON) && 0x8000 && cnt != 0) // 0x8000
@@ -101,6 +116,12 @@ void isPointed(int xMouse, int yMouse)
 		);
 		*/
 		draw_staff_button();
+		while (true)
+		{
+			check_state_staff(mousex(), mousey());
+			if (check_state_button_tab(mousex(), mousey()) > 0)
+				break;
+		}
 		
 	}
 	if (is_pointed_button_3(xMouse, yMouse) && GetAsyncKeyState(VK_LBUTTON) && 0x8000 && cnt != 2)
@@ -117,8 +138,6 @@ void isPointed(int xMouse, int yMouse)
 	}
 	if (is_pointed_exit_button(xMouse, yMouse) && GetAsyncKeyState(VK_LBUTTON) && 0x8000)
 		exit(0); // exit program immediately
-	clearmouseclick(VK_LBUTTON);
-	clearmouseclick(VK_RBUTTON);
 }
 
 void defaultButton()
