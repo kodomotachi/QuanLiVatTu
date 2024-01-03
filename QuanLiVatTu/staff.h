@@ -178,6 +178,46 @@ void check_state_staff(int xmouse, int ymouse)
 			outtextxy((1155 + 1063 - textwidth(tmp)) / 2, (200 + i * 36 + 200 + (i + 1) * 36 - textheight(tmp)) / 2, tmp);
 		}
 	}
+	if (xmouse >= 540 && xmouse <= 590 && ymouse >= 610 && ymouse <= 640)
+	{
+		setfillstyle(SOLID_FILL, WHITE);
+		bar(540, 610, 590, 640);
+
+		setbkcolor(WHITE);
+		setcolor(BUTTON_TEXT_COLOR);
+		char _left[2] = "<";
+		outtextxy((540 + 590 - textwidth(_left)) / 2, (610 + 640 - textheight(_left)) / 2, _left);
+	}
+	else
+	{
+		setfillstyle(SOLID_FILL, BUTTON_PAGE);
+		bar(540, 610, 590, 640);
+
+		char _left[2] = "<";
+		setcolor(BLACK);
+		setbkcolor(BUTTON_PAGE);
+		outtextxy((540 + 590 - textwidth(_left)) / 2, (610 + 640 - textheight(_left)) / 2, _left);
+	}
+	if (xmouse >= 660 && xmouse <= 710 && ymouse >= 610 && ymouse <= 640)
+	{
+		setfillstyle(SOLID_FILL, WHITE);
+		bar(660, 610, 710, 640);
+
+		setbkcolor(WHITE);
+		setcolor(BUTTON_TEXT_COLOR);
+		char _right[2] = ">";
+		outtextxy((660 + 710 - textwidth(_right)) / 2, (610 + 640 - textheight(_right)) / 2, _right);
+	}
+	else
+	{
+		setfillstyle(SOLID_FILL, BUTTON_PAGE);
+		bar(660, 610, 710, 640);
+
+		char _right[2] = ">";
+		setcolor(BLACK);
+		setbkcolor(BUTTON_PAGE);
+		outtextxy((660 + 710 - textwidth(_right)) / 2, (610 + 640 - textheight(_right)) / 2, _right);
+	}
 }
 
 // draw roll-page button

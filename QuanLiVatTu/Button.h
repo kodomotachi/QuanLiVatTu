@@ -45,6 +45,7 @@ bool is_pointed_button_4(int xMouse, int yMouse)
 	return false;
 }
 
+// Check if button left clicked on exit button
 bool is_pointed_exit_button(int xMouse, int yMouse)
 {
 	if (xMouse <= 1270 && xMouse >= 1240 && yMouse >= 5 && yMouse <= 35)
@@ -140,6 +141,7 @@ void isPointed(int xMouse, int yMouse)
 		exit(0); // exit program immediately
 }
 
+// Make default when you open my software
 void defaultButton()
 {
 	setfillstyle(SOLID_FILL, TAB_DEFAULT_BACKGROUND);
