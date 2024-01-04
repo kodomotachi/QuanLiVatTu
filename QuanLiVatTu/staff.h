@@ -229,5 +229,12 @@ void staff_search_box()
 	setbkcolor(SUBWINDOW_BACKGROUND);
 	setcolor(EDITEXT_TEXT_COLOR);
 
-	outtextxy((LEFT_BORDER + 225 - textwidth(tmp)) / 2, (100 + 148 - textheight(tmp)) / 2, tmp);
+	outtextxy((25 + 125 - textwidth(tmp)) / 2, (100 + 148 - textheight(tmp)) / 2, tmp);
+
+	char name[40] = "Search staff name";
+
+	setfillstyle(SOLID_FILL, EDITEXT_BACKGROUND_COLOR);
+	bar(125, 105, 575, 145);
+
+	setbkcolor(EDITEXT_BACKGROUND_COLOR);
 }
