@@ -55,6 +55,7 @@ void addNhanVien(ListNhanVien& list, NhanVien& nv)
         return;
     }
 }
+
 int findNhanVien(ListNhanVien& list, int l, int r, char maNV[10])
 {
 
@@ -183,6 +184,7 @@ void DocFileNhanVien(ListNhanVien& list)
     }
     file_nv.close();
 }
+
 void UpdateVatTuquaNV(AVLTree& root, ListNhanVien& list) {
     for (int i = 0; i < list.size; i++) {
         UpdateVatTu(root, list.data[i]->FirstHD);

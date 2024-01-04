@@ -13,6 +13,8 @@ using namespace std;
 
 const int MAXN = 200004;
 
+int check = 0;
+
 struct staff
 {
 	char MANV[15];
@@ -87,7 +89,7 @@ void staff_writeData()
 
 	if (input.fail()) // if file has error
 	{
-		std::cout << "File nhu con cac, viet lai file moi cho bo may";
+		std::cout << "File failed, try again";
 		return void();
 	}
 
@@ -204,6 +206,12 @@ void check_state_staff(int xmouse, int ymouse)
 
 		draw_button(660, 610, 710, 640, BUTTON_PAGE, BLACK, _right);
 	}
+	if (xmouse >= 125 && xmouse <= 575 && ymouse >= 105 && ymouse <= 145 && GetAsyncKeyState(VK_LBUTTON) && 0x8000)
+	{
+		setfillstyle(SOLID_FILL, EDITEXT_ON_SELECTED_COLOR);
+		bar(125, 105, 575, 145);
+		
+	}
 }
 
 // draw roll-page button
@@ -237,4 +245,7 @@ void staff_search_box()
 	bar(125, 105, 575, 145);
 
 	setbkcolor(EDITEXT_BACKGROUND_COLOR);
+	setcolor(EDITEXT_HINT_COLOR);
+
+	outtextxy(130, (105 + 145 - textheight(name)) / 2, name);
 }
