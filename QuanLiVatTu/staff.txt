@@ -1,0 +1,128 @@
+225050549
+Trinh Thi
+Trang
+1
+N22DCCN172
+Nguyen Thanh
+Tam
+0
+N22DCCN069
+Dang Phuoc Truong 
+Sinh
+0
+N22DCAT026
+Tran Quoc 
+Huy
+0
+N22DCCN011
+Nguyen Vu
+Chinh
+0
+N22DCCN050
+Vu Kim
+Long
+0
+N22DCCN141
+Huynh Ba Anh 
+Khoa
+0
+N22DCCN043
+Bui Manh
+Khoi
+0
+N22DCCN026
+Tran Tuan
+Hai
+0
+N22DCCI004
+Pham Thai Hoang 
+Dao
+0
+N22DCCN041
+Ha Tien 
+Khoa 
+0
+N22DCCN122
+Pham Minh
+Duc
+0
+N22DCCI018
+Pham Nguyen Quoc 
+Huy
+0
+N22DCCI034
+Nguyen Quoc
+Thai
+0
+N22DCDT010
+Hoang Minh
+Duy
+0
+N22DCCN132
+Tran Phi
+Hung
+0
+N22DCCN049
+Mai Hoang 
+Long
+0
+N22DCAT003
+Ta Quang
+An
+0
+N22DCDT038
+Dang Nhat 
+Nam
+0
+N22DCCN184
+Nguyen Doan Cong
+Tien
+0
+N22DCVT039
+Do Viet 
+Hung
+0
+N22DCDT025
+Nguyen Trong Nhat
+Hoang
+0
+N22DCDK006
+Phung Hoang
+Anh
+0
+N22DCCN002
+Nguyen Quoc 
+An
+0
+N22DCCN004
+Ly Trong 
+An
+0
+N22DCCN138
+Tran Minh
+Khang
+0
+N22DCDT072
+Lai Phuc 
+Tuan
+0
+N22DCDT002
+Nguyen Than
+An
+0
+N22DCAT007
+Le Quoc
+Bao
+0
+N22DCCN058
+Vu Hoang 
+Phat
+0
+N22DCAT002
+Pham Van
+An
+0
+N22DCAT017
+Nguyen Hai 
+Dong
+0

@@ -21,7 +21,7 @@ struct NodeHoaDon
     HoaDon info;
     NodeHoaDon* next = NULL;
 };
-typedef NodeHoaDon* PTRHoaDon;
+typedef NodeHoaDon *PTRHoaDon;
 
 void create_List_HoaDon(PTRHoaDon& first)
 {

@@ -21,7 +21,7 @@ struct NodeVT
     int height = 0;
 };
 
-typedef struct NodeVT* AVLTree;
+typedef struct NodeVT *AVLTree;
 
 void createTree(AVLTree& root)
 {

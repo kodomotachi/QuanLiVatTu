@@ -27,6 +27,9 @@
     <ClCompile Include="Tab.h">
       <Filter>UI</Filter>
     </ClCompile>
+    <ClCompile Include="input.h">
+      <Filter>UI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="VatTu.h">
@@ -70,5 +73,11 @@
     <Library Include="graphics.lib">
       <Filter>Header Files</Filter>
     </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="staff.txt" />
+    <Text Include="VatTu.txt">
+      <Filter>Data class</Filter>
+    </Text>
   </ItemGroup>
 </Project>

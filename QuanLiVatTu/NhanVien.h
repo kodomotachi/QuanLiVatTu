@@ -187,8 +187,9 @@ void UpdateVatTuquaNV(AVLTree& root, ListNhanVien& list) {
     for (int i = 0; i < list.size; i++) {
         UpdateVatTu(root, list.data[i]->FirstHD);
     }
+    file_nv.close();
 }
-void GhiFileNhanVien(ListNhanVien& ds)
+void GhiFileNhanVien(ListNhanVien &ds)
 {
     ofstream file_nv;
     file_nv.open("NhanVien.txt");

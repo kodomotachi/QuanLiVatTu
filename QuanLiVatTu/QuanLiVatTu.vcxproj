@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="input.h" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Tab.h" />
   </ItemGroup>
@@ -146,6 +147,10 @@
   </ItemGroup>
   <ItemGroup>
     <Library Include="graphics.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="staff.txt" />
+    <Text Include="VatTu.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
