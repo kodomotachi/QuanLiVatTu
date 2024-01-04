@@ -56,6 +56,15 @@
     <ClInclude Include="function_library.h">
       <Filter>UI</Filter>
     </ClInclude>
+    <ClInclude Include="NhanVien.h">
+      <Filter>Data class</Filter>
+    </ClInclude>
+    <ClInclude Include="CT_HoaDon.h">
+      <Filter>Data class</Filter>
+    </ClInclude>
+    <ClInclude Include="HoaDon.h">
+      <Filter>Data class</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Library Include="graphics.lib">

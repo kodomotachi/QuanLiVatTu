@@ -132,11 +132,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Button.h" />
+    <ClInclude Include="CT_HoaDon.h" />
     <ClInclude Include="Day.h" />
     <ClInclude Include="DefineConstatant.h" />
     <ClInclude Include="graphics.h" />
     <ClInclude Include="function_library.h" />
+    <ClInclude Include="HoaDon.h" />
     <ClInclude Include="mylib.h" />
+    <ClInclude Include="NhanVien.h" />
     <ClInclude Include="UI.h" />
     <ClInclude Include="UIController.h" />
     <ClInclude Include="VatTu.h" />
