@@ -2,6 +2,7 @@
 
 #include "graphics.h"
 #include "DefineConstatant.h"
+#include "UIController.h"
 
 void supplies_drawTitle()
 {
@@ -48,4 +49,20 @@ void supplies_writeData()
 		int textWidth = (225 + 125 - textwidth(s[i])) / 2;
 		outtextxy(textWidth, textHeight, s[i]);
 	}
+}
+
+void supplies_check_state_button()
+{
+
+}
+
+void supplies_button()
+{
+	int left = SUBWINDOW_RIGHT - 70;
+	int top = SUBWINDOW_TOP + 50;
+	int right = left + 50;
+	int bottom = top + 50;
+	char tmp[5] = "ADD";
+
+	draw_button(left, top, right, bottom, BUTTON_BACKGROUND, BLACK, tmp);
 }

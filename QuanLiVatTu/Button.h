@@ -100,6 +100,7 @@ void isPointed(int xMouse, int yMouse)
 		drawSubwindow();
 		supplies_drawSheet();
 		supplies_drawTitle();
+		supplies_button();
 	}
 	if (is_pointed_button_2(xMouse, yMouse) && GetAsyncKeyState(VK_LBUTTON) && 0x8000 && cnt != 1)
 	{
@@ -117,6 +118,7 @@ void isPointed(int xMouse, int yMouse)
 		);
 		*/
 		draw_staff_button();
+		staff_search_box();
 		while (true)
 		{
 			check_state_staff(mousex(), mousey());
@@ -164,4 +166,5 @@ void defaultButton()
 	supplies_drawSheet();
 	supplies_drawTitle();
 	supplies_writeData();
+	supplies_button();
 }

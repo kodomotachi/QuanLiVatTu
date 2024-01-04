@@ -2,6 +2,7 @@
 
 #include "graphics.h"
 #include "DefineConstatant.h"
+#include "UIController.h"
 #include "Button.h"
 #include <fstream>
 #include <cstring>
@@ -22,6 +23,7 @@ struct staff
 
 staff arr[MAXN]; // array use struct staff
 
+// write title's sheet
 void staff_drawTitle()
 {
 	char title[15] = "STAFF DATA";
@@ -180,43 +182,27 @@ void check_state_staff(int xmouse, int ymouse)
 	}
 	if (xmouse >= 540 && xmouse <= 590 && ymouse >= 610 && ymouse <= 640)
 	{
-		setfillstyle(SOLID_FILL, WHITE);
-		bar(540, 610, 590, 640);
-
-		setbkcolor(WHITE);
-		setcolor(BUTTON_TEXT_COLOR);
 		char _left[2] = "<";
-		outtextxy((540 + 590 - textwidth(_left)) / 2, (610 + 640 - textheight(_left)) / 2, _left);
+
+		draw_button(540, 610, 590, 640, WHITE, BUTTON_TEXT_COLOR, _left);
 	}
 	else
 	{
-		setfillstyle(SOLID_FILL, BUTTON_PAGE);
-		bar(540, 610, 590, 640);
-
 		char _left[2] = "<";
-		setcolor(BLACK);
-		setbkcolor(BUTTON_PAGE);
-		outtextxy((540 + 590 - textwidth(_left)) / 2, (610 + 640 - textheight(_left)) / 2, _left);
+
+		draw_button(540, 610, 590, 640, BUTTON_PAGE, BLACK, _left);
 	}
 	if (xmouse >= 660 && xmouse <= 710 && ymouse >= 610 && ymouse <= 640)
 	{
-		setfillstyle(SOLID_FILL, WHITE);
-		bar(660, 610, 710, 640);
-
-		setbkcolor(WHITE);
-		setcolor(BUTTON_TEXT_COLOR);
 		char _right[2] = ">";
-		outtextxy((660 + 710 - textwidth(_right)) / 2, (610 + 640 - textheight(_right)) / 2, _right);
+
+		draw_button(660, 610, 710, 640, WHITE, BUTTON_TEXT_COLOR, _right);
 	}
 	else
 	{
-		setfillstyle(SOLID_FILL, BUTTON_PAGE);
-		bar(660, 610, 710, 640);
-
 		char _right[2] = ">";
-		setcolor(BLACK);
-		setbkcolor(BUTTON_PAGE);
-		outtextxy((660 + 710 - textwidth(_right)) / 2, (610 + 640 - textheight(_right)) / 2, _right);
+
+		draw_button(660, 610, 710, 640, BUTTON_PAGE, BLACK, _right);
 	}
 }
 
@@ -231,14 +217,17 @@ void draw_staff_button()
 	int right = left + 50;
 	int bottom = top + 30;
 
-	setfillstyle(SOLID_FILL, BUTTON_PAGE);
-	setcolor(BLACK);
-	bar(left, top, right, bottom);
-	setbkcolor(BUTTON_PAGE);
-	outtextxy((left + right - textwidth(_left)) / 2, (top + bottom - textheight(_left)) / 2, _left);
+	draw_button(left, top, right, bottom, BUTTON_PAGE, BLACK, _left); // draw left button
 
-	left = right + 70;
-	right = left + 50;
-	bar(left, top, right, bottom);
-	outtextxy((left + right - textwidth(_right)) / 2, (top + bottom - textheight(_right)) / 2, _right);
+	draw_button(right + 70, top, right + 120, bottom, BUTTON_PAGE, BLACK, _right); // draw right button
+}
+
+void staff_search_box()
+{
+	char tmp[7] = "SEARCH";
+
+	setbkcolor(SUBWINDOW_BACKGROUND);
+	setcolor(EDITEXT_TEXT_COLOR);
+
+	outtextxy((LEFT_BORDER + 225 - textwidth(tmp)) / 2, (100 + 148 - textheight(tmp)) / 2, tmp);
 }

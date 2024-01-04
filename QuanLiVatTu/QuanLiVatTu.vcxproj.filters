@@ -76,5 +76,8 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="staff.txt" />
+    <Text Include="VatTu.txt">
+      <Filter>Data class</Filter>
+    </Text>
   </ItemGroup>
 </Project>
